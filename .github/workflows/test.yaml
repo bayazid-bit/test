@@ -5,9 +5,14 @@ on: push
 jobs:
   build: 
    runs-on: ubuntu-latest
+   
    steps:
-     - name: Run 
-       run: echo "helloj secret: ${{ secrets.HELLO_SECRET }} " 
+     - name: Run
+       run: |
+        echo hello secret: ${{  secrets.HELLO_SECRET }} 
+
+        
+        
   test:
     runs-on: ubuntu-latest 
     steps: 
