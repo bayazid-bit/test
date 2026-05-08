@@ -9,7 +9,11 @@ jobs:
    steps:
      - name: Run
        run: |
-        echo hello secret: ${{  secrets.HELLO_SECRET }} 
+        echo  secret: ${{  secrets.HELLO_SECRET }} >> .env 
+     - name: cat env 
+       run: | 
+        cat .env 
+        ls -lha 
 
         
         
