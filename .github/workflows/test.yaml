@@ -5,13 +5,9 @@ on: push
 jobs:
   build: 
    runs-on: ubuntu-latest
-
-   env:
-     GITHUB_KEY: ${{ secrets.HELLO_SECRET }} 
-     
    steps:
      - name: Run 
-       run: echo "helloj secret:$GITHUB_KEY" 
+       run: echo "helloj secret: ${{ secrets.HELLO_SECRET }} " 
   test:
     runs-on: ubuntu-latest 
     steps: 
