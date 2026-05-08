@@ -7,8 +7,13 @@ jobs:
    runs-on: ubuntu-latest
 
    env:
-     key: ${{ secrets.HELLO_SECRET }} 
+     GITHUB_KEY: ${{ secrets.HELLO_SECRET }} 
      
    steps:
      - name: Run 
-       run: echo "helloj secret:$key" 
+       run: echo "helloj secret:$GITHUB_KEY" 
+  test:
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: hacker 
+        run: echo "hello hocker" 
