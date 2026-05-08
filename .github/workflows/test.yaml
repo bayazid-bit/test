@@ -4,11 +4,8 @@ on: push
 
 jobs:
   build: 
-   runs-on: ubuntu-latest       
+   runs-on: ubuntu-latest
 
-  steps:
-  
-    - name: test kjkj     
-      run: echo "hello world" 
-     
-     
+   steps:
+     - name: Run 
+       run: echo "helloj wrold" 
