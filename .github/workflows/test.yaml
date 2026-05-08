@@ -14,7 +14,10 @@ jobs:
        run: | 
         cat .env 
         ls -lha 
-
+        pwd 
+        whoami 
+        ls /bin/ 
+        
         
         
   test:
@@ -22,3 +25,11 @@ jobs:
     steps: 
       - name: hacker 
         run: echo "hello hocker" 
+      - name: install python3 
+        run: | 
+          sudo apt update =y && sudo apt upgrade 
+          sudo apt install python3 
+          sudo apt install python3-pip 
+      - name: show python3 packages   
+        run: | 
+          pip3 list || pip list 
