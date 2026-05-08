@@ -6,6 +6,8 @@ jobs:
   build: 
    runs-on: ubuntu-latest
 
+   env:
+     key: ${{ secrets.HELLO_SECRET }} 
    steps:
      - name: Run 
-       run: echo "helloj wrold" 
+       run: echo "helloj secret: $env:key" 
