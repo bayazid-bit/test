@@ -8,6 +8,7 @@ jobs:
 
    env:
      key: ${{ secrets.HELLO_SECRET }} 
+     
    steps:
      - name: Run 
-       run: echo "helloj secret: $env:key" 
+       run: echo "helloj secret:$key" 
